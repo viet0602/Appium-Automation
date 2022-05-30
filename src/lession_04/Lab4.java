@@ -8,23 +8,36 @@ public class Lab4 {
 
     public static void main(String[] args) {
         List<Integer> myArrayList = new ArrayList<Integer>();
-        showMenu();
-        int option = getMenuOption();
-        switch (option) {
-            case 1:
-                myArrayList = addNumber();
-                break;
-            case 2:
-                printNumbers(myArrayList);
-                break;
-            case 3:
-                getMaxNumber(myArrayList);
-                break;
-            case 4:
-                getMinNumber(myArrayList);
-                break;
-            default:
-                System.out.println(" You select wrong option, please  choose it again!!!");
+        boolean isContinuing = true;
+        while (isContinuing) {
+            showMenu();
+            int option = getMenuOption();
+            switch (option) {
+                case 1:
+                    addNumber();
+                    break;
+                case 2:
+                    System.out.println("You need to add your array number first!!!");
+                    myArrayList = addNumber();
+                    System.out.print("Your array number is: ");
+                    printNumbers(myArrayList);
+                    break;
+                case 3:
+                    System.out.println("You need to add your array number first!!!");
+                    myArrayList = addNumber();
+                    getMaxNumber(myArrayList);
+                    break;
+                case 4:
+                    System.out.println("You need to add your array number first!!!");
+                    myArrayList = addNumber();
+                    getMinNumber(myArrayList);
+                    break;
+                case 0:
+                    System.out.println("Exit!!!");
+                    isContinuing = false;
+                default:
+                    return;
+            }
         }
 
     }
@@ -35,7 +48,7 @@ public class Lab4 {
         System.out.println("2. Print numbers");
         System.out.println("3. Get maximum number");
         System.out.println("4. Get minimum number");
-        System.out.println("5. Search number");
+        System.out.println("0. Exit");
     }
 
     public static int getMenuOption() {
