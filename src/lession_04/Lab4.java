@@ -8,37 +8,25 @@ public class Lab4 {
 
     public static void main(String[] args) {
         List<Integer> myArrayList = new ArrayList<Integer>();
-        boolean isContinuing = true;
-        while(isContinuing){
-            showMenu();
-            int option = getMenuOption();
-            switch (option) {
-                case 1:
-                    addNumber();
-                    break;
-                case 2:
-                    System.out.println("You need to add numbers first ");
-                    myArrayList = addNumber();
-                    System.out.print("Your Array List:  ");
-                    printNumbers(myArrayList);
-                    break;
-                case 3:
-                    System.out.println("You need to add numbers first ");
-                    myArrayList = addNumber();
-                    getMaxNumber(myArrayList);
-                    break;
-                case 4:
-                    System.out.println("You need to add numbers first ");
-                    myArrayList = addNumber();
-                    getMinNumber(myArrayList);
-                    break;
-                case 0:
-                    System.out.println("Exit");
-                    isContinuing =false;
-                default:
-                    System.out.println("Please input your option ");
-            }
+        showMenu();
+        int option = getMenuOption();
+        switch (option) {
+            case 1:
+                myArrayList = addNumber();
+                break;
+            case 2:
+                printNumbers(myArrayList);
+                break;
+            case 3:
+                getMaxNumber(myArrayList);
+                break;
+            case 4:
+                getMinNumber(myArrayList);
+                break;
+            default:
+                System.out.println(" You select wrong option, please  choose it again!!!");
         }
+
     }
 
     public static void showMenu() {
@@ -47,7 +35,7 @@ public class Lab4 {
         System.out.println("2. Print numbers");
         System.out.println("3. Get maximum number");
         System.out.println("4. Get minimum number");
-        System.out.println("0. Exit");
+        System.out.println("5. Search number");
     }
 
     public static int getMenuOption() {
@@ -84,6 +72,7 @@ public class Lab4 {
         }
         System.out.println("Max number: " + max);
         return max;
+
     }
 
     public static int getMinNumber(List<Integer> list) {
@@ -95,5 +84,6 @@ public class Lab4 {
         }
         System.out.println("Min number: " + min);
         return min;
+
     }
 }
