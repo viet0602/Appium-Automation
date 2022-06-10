@@ -6,7 +6,6 @@ import java.util.Scanner;
 public class Lab_64 {
 
     public static void main(String[] args) {
-
         Scanner sc = new Scanner(System.in);
         System.out.println("URL example: https://google.com");
         System.out.print("Please input your url: ");
