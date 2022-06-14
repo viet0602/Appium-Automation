@@ -1,4 +1,4 @@
-package lession_01;
+package lab_01;
 
 public class Hello {
    public static void main(String[] args){
