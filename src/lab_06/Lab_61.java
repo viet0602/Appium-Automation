@@ -1,4 +1,4 @@
-package lession_06;
+package lab_06;
 
 public class Lab_61 {
 
