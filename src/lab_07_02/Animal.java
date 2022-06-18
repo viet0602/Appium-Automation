@@ -4,6 +4,9 @@ public class Animal {
     private int speed;
     private String name;
 
+    public Animal() {
+    }
+
     public String getName() {
         return name;
     }
