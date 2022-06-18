@@ -2,6 +2,7 @@ package lab_08;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import static lab_08.AnimalWithBuilder.Builder;
 
 public class TestAnimalBuilder {
@@ -20,6 +21,7 @@ public class TestAnimalBuilder {
         animalList.add(animal4);
         testAnimalBuilder.racingAnimal(animalList);
     }
+
     private AnimalWithBuilder racingAnimal(List<AnimalWithBuilder> animalList) {
         AnimalWithBuilder animalWin = animalList.get(0);
         for (int i = 1; i < animalList.size(); i++) {
@@ -28,7 +30,7 @@ public class TestAnimalBuilder {
             }
 
         }
-        System.out.println("Winner is " + animalWin.getName() + ", with speed: " + animalWin.getSpeed());
+        System.out.println("Winner is " + animalWin.getName() + ", with speed: " + animalWin.getSpeed() + " and can fly: " + animalWin.isFlyable());
         return animalWin;
     }
 }
