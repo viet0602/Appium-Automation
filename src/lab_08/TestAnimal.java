@@ -21,7 +21,7 @@ public class TestAnimal {
         animalList.add(animal3);
         animalList.add(animal4);
         for (Animal animal : animalList) {
-            if (animal.isFlyable()) {
+            if (!(animal.isFlyable())) {
                 animalRacingList.add(animal);
             }
         }
