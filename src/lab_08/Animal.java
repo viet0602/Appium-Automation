@@ -2,15 +2,15 @@ package lab_08;
 
 import java.security.SecureRandom;
 
-public class AnimalWithBuilder {
+public class Animal {
     private String name = "Falcon";
     private int speed = 60;
     private boolean flyable = true;
 
-    public AnimalWithBuilder() {
+    public Animal() {
     }
 
-    protected AnimalWithBuilder(Builder builder) {
+    protected Animal(Builder builder) {
         name = builder.name;
         speed = builder.speed;
         flyable = builder.flyable;
@@ -51,9 +51,8 @@ public class AnimalWithBuilder {
             return this;
         }
 
-        public AnimalWithBuilder build() {
-            return new AnimalWithBuilder(this);
+        public Animal build() {
+            return new Animal(this);
         }
     }
-
 }
