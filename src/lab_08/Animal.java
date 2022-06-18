@@ -7,9 +7,6 @@ public class Animal {
     private int speed = 60;
     private boolean flyable = true;
 
-    public Animal() {
-    }
-
     protected Animal(Builder builder) {
         name = builder.name;
         speed = builder.speed;
@@ -22,7 +19,7 @@ public class Animal {
     }
 
     public int getSpeed() {
-        return new SecureRandom().nextInt(speed);
+        return this.speed;
     }
 
     public boolean isFlyable() {
@@ -54,5 +51,6 @@ public class Animal {
         public Animal build() {
             return new Animal(this);
         }
+
     }
 }

@@ -23,7 +23,6 @@ public class SpeedController {
             if (animalList.get(i).getSpeed() > animalWin.getSpeed()) {
                 animalWin = animalList.get(i);
             }
-
         }
         System.out.println("Winner is " + animalWin.getName() + ", with speed: " + animalWin.getSpeed());
         return animalWin;

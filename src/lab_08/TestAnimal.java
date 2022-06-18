@@ -1,5 +1,6 @@
 package lab_08;
 
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,10 +13,10 @@ public class TestAnimal {
         List<Animal> animalRacingList = new ArrayList<>();
         TestAnimal testAnimal = new TestAnimal();
         Builder animalBuilder = new Builder();
-        Animal animal1 = animalBuilder.setName("Eagle").setFlyable(true).setSpeed(120).build();
-        Animal animal2 = animalBuilder.setName("Falcon").setFlyable(true).setSpeed(90).build();
-        Animal animal3 = animalBuilder.setName("Tiger").setFlyable(false).setSpeed(100).build();
-        Animal animal4 = animalBuilder.setName("Snake").setFlyable(false).setSpeed(60).build();
+        Animal animal1 = animalBuilder.setName("Eagle").setFlyable(true).setSpeed(new SecureRandom().nextInt(60)).build();
+        Animal animal2 = animalBuilder.setName("Falcon").setFlyable(true).setSpeed(new SecureRandom().nextInt(90)).build();
+        Animal animal3 = animalBuilder.setName("Tiger").setFlyable(false).setSpeed(new SecureRandom().nextInt(75)).build();
+        Animal animal4 = animalBuilder.setName("Snake").setFlyable(false).setSpeed(new SecureRandom().nextInt(50)).build();
         animalList.add(animal1);
         animalList.add(animal2);
         animalList.add(animal3);
