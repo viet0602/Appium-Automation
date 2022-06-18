@@ -10,7 +10,7 @@ public class TestAnimal {
     public static void main(String[] args) {
         List<Animal> animalList = new ArrayList<>();
         List<Animal> animalRacingList = new ArrayList<>();
-        TestAnimal testAnimalBuilder = new TestAnimal();
+        TestAnimal testAnimal = new TestAnimal();
         Builder animalBuilder = new Builder();
         Animal animal1 = animalBuilder.setName("Eagle").setFlyable(true).setSpeed(120).build();
         Animal animal2 = animalBuilder.setName("Falcon").setFlyable(true).setSpeed(90).build();
@@ -25,7 +25,7 @@ public class TestAnimal {
                 animalRacingList.add(animal);
             }
         }
-        testAnimalBuilder.racingAnimal(animalRacingList);
+        testAnimal.racingAnimal(animalRacingList);
     }
 
     private Animal racingAnimal(List<Animal> animalList) {
