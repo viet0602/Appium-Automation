@@ -14,10 +14,10 @@ public class SpeedController {
         animalList.add(dog);
         animalList.add(horse);
         animalList.add(tiger);
-        speedController.racingAnimal(animalList);
+        speedController.getWinner(animalList);
     }
 
-    private Animal racingAnimal(List<Animal> animalList) {
+    private Animal getWinner(List<Animal> animalList) {
         Animal animalWin = animalList.get(0);
         for (int i = 1; i < animalList.size(); i++) {
             if (animalList.get(i).getSpeed() > animalWin.getSpeed()) {

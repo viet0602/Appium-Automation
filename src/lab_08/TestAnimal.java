@@ -26,10 +26,10 @@ public class TestAnimal {
                 animalRacingList.add(animal);
             }
         }
-        testAnimal.racingAnimal(animalRacingList);
+        testAnimal.getWinner(animalRacingList);
     }
 
-    private Animal racingAnimal(List<Animal> animalList) {
+    private Animal getWinner(List<Animal> animalList) {
         Animal animalWin = animalList.get(0);
         for (int i = 1; i < animalList.size(); i++) {
             if (animalList.get(i).getSpeed() > animalWin.getSpeed()) {
